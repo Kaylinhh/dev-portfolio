@@ -1,1 +1,15 @@
-<p>header works!</p>
+<mat-toolbar>
+
+    <ul class="flex">
+
+        <li *ngFor="let nav of navList" 
+        [routerLink]="[nav.path]"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}" 
+        class="m-4">
+        {{nav.label}}
+        </li>
+    
+    </ul>
+
+</mat-toolbar>
