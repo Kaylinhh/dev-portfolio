@@ -8,7 +8,6 @@ import { Component, HostBinding } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-@HostBinding('class.hide-navigation')
 export class HomeComponent {
 
 }
