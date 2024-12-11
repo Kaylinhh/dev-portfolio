@@ -1,4 +1,10 @@
-<mat-toolbar class="bg-black w-full">
+<div
+*ngIf="isVisible"
+class="transition-transform duration-700 transform ease-out translate-y-full opacity-0"
+[ngClass]="{'translate-y-0 opacity-100': isVisible}">
+
+  <mat-toolbar 
+  >
 
     <ul class="flex w-full">
 
@@ -13,3 +19,5 @@
     </ul>
 
 </mat-toolbar>
+
+</div>

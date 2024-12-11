@@ -1,19 +1,30 @@
-<div class="grid place-items-center">
-    <p class="text-8xl">JULIE</p>
+<div class="grid place-items-center mt-10">
 
-    <div class="flex items-center justify-center my-5 ">
+    <p class="text-8xl opacity-0 transform -translate-x-64 transition-all duration-1000 ease-out" 
+    [ngClass]="{'opacity-100 transform translate-x-0': hasLoaded}">JULIE</p>
+
+    <div class="flex items-center justify-center opacity-0 transition-opacity duration-1000 ease-out" 
+    [ngClass]="{'opacity-100': hasLoaded}">
         <span class="flex items-center justify-center space-x-4">
-            <span class="w-20 border-t border-teal-700"></span>
-            <p class="text-teal-700 font-medium">portfolio</p>
-            <span class="w-20 border-t border-teal-700"></span>
+            <span class="w-20 border-t-2 border-teal-700"></span>
+            <p class="text-teal-700 font-small font-semibold">portfolio</p>
+            <span class="w-20 border-t-2 border-teal-700"></span>
         </span>
     </div>
 
-    <p class="text-8xl">LY</p>
+    <p class="text-8xl opacity-0 transform translate-x-64 transition-all duration-1000 ease-out" 
+    [ngClass]="{'opacity-100 transform -translate-x-0': hasLoaded}">LY</p>
 
     <div class="p-5"></div>
 
-    <p class="text-4xl text-teal-700">Unity & Web</p>
-    <p class="text-4xl text-teal-700">developer</p>
+    <p class="text-4xl text-teal-700 opacity-0 transition-opacity duration-1000 ease-out" 
+    [ngClass]="{'opacity-100': hasLoaded}">Unity & Web</p>
+    <p class="text-4xl text-teal-700 opacity-0 transition-opacity duration-1000 ease-out" 
+    [ngClass]="{'opacity-100': hasLoaded}">developer</p>
 
+    <svg (click)="goToHeader()" class="animate-bounce mt-10 bg-transparent opacity-0 transition-opacity duration-1000 ease-out" 
+    [ngClass]="{'opacity-100': hasLoaded}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="56" height="56" fill="white">
+        <path d="M12 16l-4-4h8z"/>
+      </svg>
+      
 </div>
