@@ -1,10 +1,7 @@
-<div
-*ngIf="isVisible"
-class="transition-transform duration-700 transform ease-out translate-y-full opacity-0"
-[ngClass]="{'translate-y-0 opacity-100': isVisible}">
 
-  <mat-toolbar 
-  >
+<div   [ngClass]="{'translate-y-0': isVisible, 'translate-y-[100vh]': !isVisible}"
+class="fixed left-0 right-0 transition-transform duration-[1500ms] ease-in-out delay-100">
+<mat-toolbar>
 
     <ul class="flex w-full">
 
@@ -19,5 +16,4 @@ class="transition-transform duration-700 transform ease-out translate-y-full opa
     </ul>
 
 </mat-toolbar>
-
 </div>

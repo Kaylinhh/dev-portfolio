@@ -14,16 +14,16 @@ export class HeaderComponent implements OnInit {
 
   isVisible = false;
   
-  navList: {id: number, label: string, path: string}[] = [
-    {id: 1, label: 'home', path: '/home'},
-    {id: 2, label: 'projects', path: '/project'},
-    {id: 3, label: 'about', path: '/about'}
-  ]
-
   ngOnInit(): void {
     // Trigger slide-in animation after the component has been initialized
     setTimeout(() => {
       this.isVisible = true;
     }, 100);  // Optional delay for smooth initial render
   }
+  
+  navList: {id: number, label: string, path: string}[] = [
+    {id: 1, label: 'home', path: '/home'},
+    {id: 2, label: 'projects', path: '/project'},
+    {id: 3, label: 'about', path: '/about'}
+  ]
 }
