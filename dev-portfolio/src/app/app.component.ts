@@ -3,16 +3,17 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs';
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet, HeaderComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
 
-  showHeader = true;
+  showHeaderAndFooter = true;
 
   
   constructor(private router: Router) {
@@ -26,6 +27,6 @@ export class AppComponent {
   }
 
   private updateHeaderVisibility(url: string): void {
-    this.showHeader = url !== '/home' && url !== '/' && url !== '/header';
+    this.showHeaderAndFooter = url !== '/home' && url !== '/' && url !== '/header';
   }
 }

@@ -22,6 +22,6 @@ export class HomeComponent implements OnInit {
   }
 
   goToHeader(): void {
-    this.router.navigate(['/header']);  // Navigate to the 'another' route
+    this.router.navigate(['/0']);  // Navigate to the 'another' route
   }
 }

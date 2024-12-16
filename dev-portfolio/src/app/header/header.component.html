@@ -1,7 +1,6 @@
 
 <div   [ngClass]="{'translate-y-0': isVisible, 'translate-y-[100vh]': !isVisible}"
-class="fixed left-0 right-0 transition-transform duration-[1500ms] ease-in-out delay-100">
-<mat-toolbar>
+class="fixed w-full left-0 right-0 transition-transform duration-[1500ms] ease-in-out delay-100">
 
     <ul class="flex w-full">
 
@@ -9,11 +8,10 @@ class="fixed left-0 right-0 transition-transform duration-[1500ms] ease-in-out d
         [routerLink]="[nav.path]"
         routerLinkActive="active-link"
         [routerLinkActiveOptions]="{exact: true}" 
-        class="m-4">
+        class="m-4 text-2xl active:text-teal-700 active:font-medium hover:text-teal-700 focus:text-teal-700 focus:font-semibold">
         {{nav.label}}
         </li>
     
     </ul>
 
-</mat-toolbar>
 </div>
