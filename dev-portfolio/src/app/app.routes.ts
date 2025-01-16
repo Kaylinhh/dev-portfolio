@@ -5,12 +5,14 @@ import { ProjectComponent } from "./project/project.component";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { PlaceholderComponent } from "./placeholder/placeholder.component";
+import { ProjectDetailComponent } from "./project-detail/project-detail.component";
 
 export const routes: Routes = [
     {path: '', pathMatch: 'full', redirectTo: 'home'},
     {path: 'home', component: HomeComponent},
     {path: 'about', component: AboutComponent},
     {path: 'project', component: ProjectComponent},
+    {path: 'project/:id', component: ProjectDetailComponent},
     {path: 'header', component: HeaderComponent},
     {path: 'footer', component: FooterComponent},
     {path: '0', component: PlaceholderComponent}    

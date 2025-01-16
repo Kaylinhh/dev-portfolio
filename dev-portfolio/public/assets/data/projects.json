@@ -1,0 +1,23 @@
+[
+        {
+            "id": 1,
+            "path": "/project/1",
+            "name": "Table Tap",
+            "image": "assets/images/article1.jpg",
+            "content": "ceci est le contenu du projet 1"
+        },
+        {
+            "id": 2,
+            "path": "/project/2",
+            "name": "Shake it!",
+            "image": "assets/images/article2.jpg",
+            "content": "ceci est le contenu du projet 2"
+        },
+        {
+            "id": 3,
+            "path": "/project/3",
+            "name": "Pachinko Game",
+            "image": "assets/images/article3.jpg",
+            "content": "ceci est le contenu du projet 3"
+        }
+    ]

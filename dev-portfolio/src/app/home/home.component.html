@@ -1,9 +1,8 @@
 <div class="grid place-items-center mt-10">
 
-    <p class="text-8xl opacity-0 transform -translate-x-64 transition-all duration-1000 ease-out" 
-    [ngClass]="{'opacity-100 transform translate-x-0': hasLoaded}">JULIE</p>
-
-    <div class="flex items-center justify-center opacity-0 transition-opacity duration-1000 ease-out" 
+    <p class="slide-right text-8xl ease-out duration-1000">JULIE</p>
+    
+    <div class="flex items-center justify-center fade-in" 
     [ngClass]="{'opacity-100': hasLoaded}">
         <span class="flex items-center justify-center space-x-4">
             <span class="w-20 border-t-2 border-teal-700"></span>
@@ -12,14 +11,13 @@
         </span>
     </div>
 
-    <p class="text-8xl opacity-0 transform translate-x-64 transition-all duration-1000 ease-out" 
-    [ngClass]="{'opacity-100 transform -translate-x-1': hasLoaded}">LY</p>
+    <p class="slide-left text-8xl">LY</p>
 
     <div class="p-5"></div>
 
-    <p class="text-4xl text-teal-700 opacity-0 transition-opacity duration-1000 ease-out" 
+    <p class="text-4xl text-teal-700 fade-in" 
     [ngClass]="{'opacity-100': hasLoaded}">Unity & Web</p>
-    <p class="text-4xl text-teal-700 opacity-0 transition-opacity duration-1000 ease-out" 
+    <p class="text-4xl text-teal-700 fade-in" 
     [ngClass]="{'opacity-100': hasLoaded}">developer</p>
 
     <svg (click)="goToHeader()" class="animate-bounce mt-10 bg-transparent opacity-0 transition-opacity duration-1000 ease-out" 

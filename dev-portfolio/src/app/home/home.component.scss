@@ -1,2 +1,37 @@
+.slide-right {
+    animation: 1s slide-right
+}
 
-  
+@keyframes slide-right {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0%
+    }
+}
+
+.slide-left {
+    animation: 1s slide-left
+}
+
+@keyframes slide-left {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0%
+    }
+}
+
+.fade-in {
+    animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}

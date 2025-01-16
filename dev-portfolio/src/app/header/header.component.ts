@@ -15,10 +15,10 @@ export class HeaderComponent implements OnInit {
   isVisible = false;
   
   ngOnInit(): void {
-    // Trigger slide-in animation after the component has been initialized
+
     setTimeout(() => {
       this.isVisible = true;
-    }, 100);  // Optional delay for smooth initial render
+    }, 100);  
   }
   
   navList: {id: number, label: string, path: string}[] = [
