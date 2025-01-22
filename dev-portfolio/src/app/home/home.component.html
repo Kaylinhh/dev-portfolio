@@ -1,4 +1,5 @@
-<div class="grid place-items-center mt-10">
+<div class="h-lvh flex justify-center items-center">
+<div class="grid place-items-center">
 
     <p class="slide-right text-8xl ease-out duration-1000">JULIE</p>
     
@@ -20,9 +21,10 @@
     <p class="text-4xl text-teal-700 fade-in" 
     [ngClass]="{'opacity-100': hasLoaded}">developer</p>
 
-    <svg (click)="goToHeader()" class="animate-bounce mt-10 bg-transparent opacity-0 transition-opacity duration-1000 ease-out" 
+    <svg (click)="goToHeader()" class="animate-bounce mt-10 bg-transparent opacity-0 transition-opacity duration-1000 ease-out cursor-pointer" 
     [ngClass]="{'opacity-100': hasLoaded}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="56" height="56" fill="white">
         <path d="M12 16l-4-4h8z"/>
       </svg>
       
+</div>
 </div>

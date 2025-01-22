@@ -1,7 +1,22 @@
-<div class="absolute bottom-0 w-full">
+<div class="fixed bottom-0 w-full text-sm md:text-base">
+
 <ul class="flex">
-    <li class="p-4 underline flex text-teal-700 w-1/5"> <img src="../../assets/images/github.png" class="size-12"> <a href="https://www.github.com/kaylinhh">Kaylinhh</a></li>
-    <li class="p-4 underline flex text-teal-700 w-1/5"> <img src="../../assets/images/linkedin.png" class="size-12"> <a href="https://www.linkedin.com/in/julie-ly-704893272">LinkedIn</a></li>
-    <li class="p-4 flex w-1/5"> <img src="../../../assets/images/mail.svg" class="size-12"> {{ mailAdress }}</li>
+
+    <li class="p-2 md:p-4 underline flex text-teal-700 w-auto">
+        <img src="../../assets/images/github.png" class="size-10"> 
+        <a href="https://www.github.com/kaylinhh" class="content-center">Kaylinhh</a>
+    </li>
+
+    <li class="p-2 md:p-4 underline flex text-teal-700 w-auto">
+        <img src="../../assets/images/linkedin.png" class="size-10">
+        <a href="https://www.linkedin.com/in/julie-ly-704893272" class="content-center">LinkedIn</a>
+    </li>
+
+    <li class="p-2 md:p-4 flex w-auto">
+        <img src="../../../assets/images/mail.svg" class="size-10">
+        <span class="content-center">{{ mailAdress }}</span>
+    </li>
+
 </ul>
+
 </div>

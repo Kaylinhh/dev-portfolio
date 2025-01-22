@@ -1,1 +1,81 @@
-<div>{{project?.id}}</div>
+<div class="mt-16 mb-32 md:mb-20 mx-4 md:flex fade-in">
+
+    <div class="w-full md:w-3/4 p-2">
+
+        <div class="relative">
+
+            <img [src]=[project.image] class="cursor-pointer hover:opacity-80 z-10" (click)="openImageModal()">
+
+            <div *ngIf="isImageModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40" (click)="closeImageModal()">
+
+                <div class="relative max-w-full max-h-full h-auto w-auto" (click)="$event.stopPropagation()">
+                    <img [src]=[project.image] class="max-w-[90vw] max-h-[90vh] object-contain">
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="text-justify py-4">{{project.description}}</div>
+
+        <div class="relative">
+
+            <video autoplay muted loop [src]=[project.video] class="cursor-pointer hover:opacity-80 z-10" (click)="openVideoModal()"></video>
+
+            <div *ngIf="isVideoModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40" (click)="closeVideoModal()">
+
+                <div class="relative max-w-full max-h-full h-auto w-auto" (click)="$event.stopPropagation()">
+                    <video autoplay muted loop [src]=[project.video] class="max-w-[90vw] max-h-[90vh] object-contain"></video>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-justify py-4">{{project.content}}</div>
+
+    </div>
+
+    <div class="w-full md:w-1/5 md:mx-4 md:fixed md:top-20 md:right-0 z-30">
+
+        <li class="list-none p-2">
+
+            <span class="font-semibold">Technologies utilisées:</span>
+
+            <ul *ngFor="let stack of project.stack">
+                {{stack}}
+            </ul>
+
+        </li>
+
+        <div *ngIf="project.link.length > 1" class="p-2">
+
+            <li class="list-none">
+
+                <span class="font-semibold">Github:</span>
+
+                <ul>
+                    <a [href]=[project.link[0]] class="underline text-teal-700">Frontend</a>
+                </ul>
+                <ul>
+                    <a [href]=[project.link[1]] class="underline text-teal-700">Backend</a>
+                </ul>
+
+            </li>
+
+        </div>
+
+        <div *ngIf="project.link.length == 1" class="p-2">
+
+            <li class="list-none">
+
+                <span class="font-semibold">Unity Play:</span>
+
+                <ul>
+                    <a [href]=[project.link[0]] class="underline text-teal-700">Jeu</a>
+                </ul>
+
+            </li>
+
+        </div>
+        
+    </div>
+</div>

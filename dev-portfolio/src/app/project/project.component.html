@@ -1,10 +1,10 @@
-<ul class="divide-y">
+<ul class="divide-y fade-in mb-32 mt-14 mx-4">
 
     <li *ngFor="let project of projectList" 
     [routerLink]="[project.path]"
     routerLinkActive="active-link"
     [routerLinkActiveOptions]="{exact: true}" 
-    class="py-4 text-2xl active:text-teal-700 active:font-medium hover:text-teal-700 focus:text-teal-700 focus:font-semibold">
+    class="py-4 text-2xl active:text-teal-700 active:font-medium hover:text-teal-700 focus:text-teal-700 focus:font-semibold cursor-pointer">
     {{project.name}}
     </li>
 

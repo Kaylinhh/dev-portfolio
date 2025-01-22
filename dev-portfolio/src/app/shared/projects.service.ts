@@ -16,9 +16,16 @@ export class ProjectsService {
     return this.http.get<Project[]>(this.url);
   }
 
-  getProjectById(id: number): Observable<Project | undefined> {
+  getProjectById(id: number): Observable<Project> {
     return this.http.get<Project[]>(this.url).pipe(
-      map(projects => projects.find(project => project.id === id))
+      map(projects => {
+        const project = projects.find(project => project.id === id);
+        if (!project) {
+          throw new Error(`Project with id ${id} not found`);
+        }
+        return project;
+      })
     );
   }
+  
 }

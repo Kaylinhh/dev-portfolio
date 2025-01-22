@@ -1,6 +1,6 @@
 
 <div   [ngClass]="{'translate-y-0': isVisible, 'translate-y-[100vh]': !isVisible}"
-class="fixed mb-4 w-full left-0 right-0 transition-transform duration-[1500ms] ease-in-out delay-100">
+class="fixed mb-2 w-full left-0 right-0 transition-transform duration-[1500ms] ease-in-out delay-100">
 
     <ul class="flex w-full">
 
@@ -8,7 +8,7 @@ class="fixed mb-4 w-full left-0 right-0 transition-transform duration-[1500ms] e
         [routerLink]="[nav.path]"
         routerLinkActive="active-link"
         [routerLinkActiveOptions]="{exact: true}" 
-        class="m-4 text-2xl active:text-teal-700 active:font-medium hover:text-teal-700 focus:text-teal-700 focus:font-semibold">
+        class="m-4 text-2xl active:text-teal-700 active:font-medium hover:text-teal-700 focus:text-teal-700 focus:font-semibold cursor-pointer">
         {{nav.label}}
         </li>
     
