@@ -1,5 +1,5 @@
 .slide-right {
-    animation: 1s slide-right
+    animation: 2s slide-right
 }
 
 @keyframes slide-right {
@@ -12,7 +12,7 @@
 }
 
 .slide-left {
-    animation: 1s slide-left
+    animation: 2s slide-left
 }
 
 @keyframes slide-left {
@@ -25,7 +25,7 @@
 }
 
 .fade-in {
-    animation: fadeIn ease 1s;
+    animation: fadeIn ease 2s;
 }
 @keyframes fadeIn {
     0% {

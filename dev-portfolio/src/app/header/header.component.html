@@ -7,7 +7,7 @@ class="fixed mb-2 w-full left-0 right-0 transition-transform duration-[1500ms] e
         <li *ngFor="let nav of navList" 
         [routerLink]="[nav.path]"
         routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{exact: true}" 
+        [routerLinkActiveOptions]="{exact: false}" 
         class="m-4 text-2xl active:text-teal-700 active:font-medium hover:text-teal-700 focus:text-teal-700 focus:font-semibold cursor-pointer">
         {{nav.label}}
         </li>

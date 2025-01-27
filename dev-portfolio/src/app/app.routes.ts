@@ -4,7 +4,6 @@ import { AboutComponent } from "./about/about.component";
 import { ProjectComponent } from "./project/project.component";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
-import { PlaceholderComponent } from "./placeholder/placeholder.component";
 import { ProjectDetailComponent } from "./project-detail/project-detail.component";
 
 export const routes: Routes = [
@@ -14,6 +13,5 @@ export const routes: Routes = [
     {path: 'project', component: ProjectComponent},
     {path: 'project/:id', component: ProjectDetailComponent},
     {path: 'header', component: HeaderComponent},
-    {path: 'footer', component: FooterComponent},
-    {path: '0', component: PlaceholderComponent}    
+    {path: 'footer', component: FooterComponent}
 ]

@@ -1,9 +1,9 @@
-<div class="h-lvh flex justify-center items-center">
-<div class="grid place-items-center">
+<div class="h-lvh flex justify-center items-center w-full">
+<div class="grid place-items-center w-full">
 
     <p class="slide-right text-8xl ease-out duration-1000">JULIE</p>
     
-    <div class="flex items-center justify-center fade-in" 
+    <div class="flex items-center justify-center fade-in w-full" 
     [ngClass]="{'opacity-100': hasLoaded}">
         <span class="flex items-center justify-center space-x-4">
             <span class="w-20 border-t-2 border-teal-700"></span>
@@ -21,8 +21,8 @@
     <p class="text-4xl text-teal-700 fade-in" 
     [ngClass]="{'opacity-100': hasLoaded}">developer</p>
 
-    <svg (click)="goToHeader()" class="animate-bounce mt-10 bg-transparent opacity-0 transition-opacity duration-1000 ease-out cursor-pointer" 
-    [ngClass]="{'opacity-100': hasLoaded}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="56" height="56" fill="white">
+    <svg (click)="goToAbout()" class="animate-bounce m-20 bg-transparent opacity-0 transition-opacity duration-1000 ease-out cursor-pointer" 
+    [ngClass]="{'opacity-100': hasLoaded}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="80" height="80" fill="white">
         <path d="M12 16l-4-4h8z"/>
       </svg>
       

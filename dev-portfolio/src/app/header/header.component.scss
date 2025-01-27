@@ -1,3 +1,7 @@
 div {
     transition: transform 1.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth cubic easing */
 }
+
+.active-link {
+    @apply text-teal-700 font-medium;
+}

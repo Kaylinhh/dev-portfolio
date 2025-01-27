@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     }, 100); // Optional delay to ensure the element is fully rendered
   }
 
-  goToHeader(): void {
-    this.router.navigate(['/0']);  // Navigate to the 'another' route
+  goToAbout(): void {
+    this.router.navigate(['/about']);  // Navigate to the 'another' route
   }
 }

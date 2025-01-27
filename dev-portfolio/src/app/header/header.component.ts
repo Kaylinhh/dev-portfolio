@@ -22,8 +22,8 @@ export class HeaderComponent implements OnInit {
   }
   
   navList: {id: number, label: string, path: string}[] = [
-    {id: 1, label: 'home', path: '/home'},
-    {id: 2, label: 'projects', path: '/project'},
-    {id: 3, label: 'about', path: '/about'}
+    {id: 1, label: '#home', path: '/home'},
+    {id: 2, label: '#projects', path: '/project'},
+    {id: 3, label: '#about', path: '/about'}
   ]
 }
