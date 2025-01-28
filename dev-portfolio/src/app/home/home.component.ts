@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   hasLoaded = false;
 
-  constructor(private router: Router) {}  // Inject Router
+  constructor(private scroller: ViewportScroller, private router: Router) {}  // Inject Router
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -23,5 +23,9 @@ export class HomeComponent implements OnInit {
 
   goToAbout(): void {
     this.router.navigate(['/about']);  // Navigate to the 'another' route
+  }
+
+  scrollDown() {
+    // this.scroller.scrollToAnchor();
   }
 }
