@@ -1,6 +1,7 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -20,12 +21,19 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.hasLoaded = true;  // Add the 'show' class to trigger the slide-in animation
     }, 100); // Optional delay to ensure the element is fully rendered
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      });
+    
   }
 
   @HostListener('window:wheel', ['$event'])
   onScroll(event: WheelEvent) {
     if (event.deltaY > 0) {
-      this.router.navigate(['/about']);
+      this.goToAbout();
     }
   }
 
@@ -40,7 +48,7 @@ export class HomeComponent implements OnInit {
     const deltaY = this.touchStartY - touchEndY;
 
     if (deltaY > 50) {
-      this.navigateToAbout();
+      this.goToAbout();
     }
   }
 
@@ -48,9 +56,4 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/about']);
   }
 
-  private navigateToAbout() {
-    this.router.navigate(['/about']).then(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth'});
-    });
-  }
 }
