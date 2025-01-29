@@ -3,10 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Project } from '../shared/project.model';
 import { ProjectsService } from '../shared/projects.service';
 import { CommonModule } from '@angular/common';
+import { HighlightPipe } from '../highlight.pipe';
 
 @Component({
   selector: 'app-project-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, HighlightPipe],
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss'
 })

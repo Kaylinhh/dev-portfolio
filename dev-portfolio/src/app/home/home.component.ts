@@ -1,5 +1,5 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -21,11 +21,15 @@ export class HomeComponent implements OnInit {
     }, 100); // Optional delay to ensure the element is fully rendered
   }
 
+  @HostListener('window:wheel', ['$event'])
+  onScroll(event: WheelEvent) {
+    if (event.deltaY > 0) {
+      this.router.navigate(['/about']);
+    }
+  }
+
   goToAbout(): void {
     this.router.navigate(['/about']);  // Navigate to the 'another' route
   }
 
-  scrollDown() {
-    // this.scroller.scrollToAnchor();
-  }
 }

@@ -4,7 +4,7 @@
 
         <div class="relative">
 
-            <img [src]=[project.image] class="cursor-pointer hover:opacity-80 z-10" (click)="openImageModal()">
+            <img [src]=[project.image] class="cursor-pointer hover:opacity-80 z-10 content-center" (click)="openImageModal()">
 
             <div *ngIf="isImageModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40" (click)="closeImageModal()">
 
@@ -15,22 +15,53 @@
             </div>
         </div>
         
-        <div class="text-justify py-4">{{project.description}}</div>
+        <p 
+        class="text-justify py-4" 
+        [innerHTML]="project.description | highlight:[
+            { word: 'Table Tap', tag: 'i'},
+            { word: 'Shake it!', tag: 'i'},
+            { word: 'Pachinko Game', tag: 'i'},
+
+        ]">
+        </p>
 
         <div class="relative">
 
-            <video autoplay muted loop [src]=[project.video] class="cursor-pointer hover:opacity-80 z-10" (click)="openVideoModal()"></video>
+            <video autoplay muted loop [src]=[project.video] class="cursor-pointer hover:opacity-80 z-10 content-center" (click)="openVideoModal()"></video>
 
             <div *ngIf="isVideoModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40" (click)="closeVideoModal()">
 
                 <div class="relative max-w-full max-h-full h-auto w-auto" (click)="$event.stopPropagation()">
-                    <video autoplay muted loop [src]=[project.video] class="max-w-[90vw] max-h-[90vh] object-contain"></video>
+                    <video playisinline=1 muted loop [src]=[project.video] class="max-w-[90vw] max-h-[90vh] object-contain"></video>
                 </div>
 
             </div>
         </div>
 
-        <div class="text-justify py-4">{{project.content}}</div>
+        <p 
+        class="text-justify py-4" 
+        [innerHTML]="project.content | highlight:[
+            { word: 'CRUD', tag: 'b'},
+            { word: 'Create', tag: 'i'},
+            { word: 'Read', tag: 'i'},
+            { word: 'Update', tag: 'i'},
+            { word: 'Delete', tag: 'i'},
+            { word: 'Exemple', tag: 'u'},
+            { word: 'behaviour subject', tag: 'b'},
+            { word: 'créer', tag: 'b'},
+            { word: 'modifier', tag: 'b'},
+            { word: 'modifiant', tag: 'b'},
+            { word: 'supprimer', tag: 'b'},
+            { word: 'accéder', tag: 'b'},
+            { word: 'gérer', tag: 'b'},
+            { word: 'ai prototypé', tag: 'b'},
+            { word: 'compteur', tag: 'b'},
+            { word: 'tag', tag: 'i'},
+
+
+        ]">
+        </p>
+
 
     </div>
 
