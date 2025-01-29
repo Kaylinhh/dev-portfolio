@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
     const deltaY = this.touchStartY - touchEndY;
 
     if (deltaY > 50) {
-      this.router.navigate(['/about'])
+      this.navigateToAbout();
     }
   }
 
@@ -48,4 +48,9 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/about']);
   }
 
+  private navigateToAbout() {
+    this.router.navigate(['/about']).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth'});
+    });
+  }
 }
