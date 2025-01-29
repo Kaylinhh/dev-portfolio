@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   hasLoaded = false;
+  private touchStartY = 0;
 
   constructor(private scroller: ViewportScroller, private router: Router) {}  // Inject Router
 
@@ -25,6 +26,21 @@ export class HomeComponent implements OnInit {
   onScroll(event: WheelEvent) {
     if (event.deltaY > 0) {
       this.router.navigate(['/about']);
+    }
+  }
+
+  @HostListener('window:wheel', ['$event'])
+  onTouchStart(event: TouchEvent){
+    this.touchStartY = event.touches[0].clientY;
+    }
+
+  @HostListener('window:wheel', ['$event'])
+  onTouchMove(event: TouchEvent){
+    const touchEndY = event.touches[0].clientY;
+    const deltaY = this.touchStartY - touchEndY;
+
+    if (deltaY > 50) {
+      this.router.navigate(['/about'])
     }
   }
 
