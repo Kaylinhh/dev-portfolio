@@ -29,12 +29,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  @HostListener('window:wheel', ['$event'])
+  @HostListener('touchstart', ['$event'])
   onTouchStart(event: TouchEvent){
     this.touchStartY = event.touches[0].clientY;
     }
 
-  @HostListener('window:wheel', ['$event'])
+  @HostListener('touchmove', ['$event'])
   onTouchMove(event: TouchEvent){
     const touchEndY = event.touches[0].clientY;
     const deltaY = this.touchStartY - touchEndY;
@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
   }
 
   goToAbout(): void {
-    this.router.navigate(['/about']);  // Navigate to the 'another' route
+    this.router.navigate(['/about']);
   }
 
 }
