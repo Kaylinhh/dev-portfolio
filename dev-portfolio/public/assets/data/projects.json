@@ -1,35 +1,50 @@
 [
         {
             "id": 1,
+            "type": "web",
             "path": "/project/1",
             "name": "Table Tap",
             "image": "assets/images/screen1.png",
             "video": "assets/videos/tabletap.mp4",
             "description": "Table Tap est une application web permettant aux clients de commander directement à table, dans un bar/restaurant. La commande est ensuite envoyée côté cuisine, ou le personnel peut valider et servir les commandes. Il est également possible côté administrateur de gérer les produits disponibles sur le menu, et d’avoir accès aux statistiques de vente dans le tableau de bord. Ce projet a été réalisé dans une équipe de 3 personnes en 7 semaines.",
-            "content": "J'ai développé la partie gestion de produits à l’aide d’un CRUD (Create, Read, Update, Delete). L’utilisateur peut accéder à ses produits, en créer de nouveaux, les modifier et les supprimer dans la base de données. Il est possible de faire de même avec les catégories de produits. J’ai également ajouté des pictogrammes 'végétarien', 'sans gluten', et 'épicé', pour apporter plus d’informations. Un aperçu en temps réel du produit est également disponible lors de sa création grâce à un behaviour subject. Exemple : l'espresso martini, avec un prix de 8,50€, une catégorie 'boisson' et une sous-catégorie 'cocktail', végétarien, sans gluten, et non épicé. J'ai ajouté une barre de recherche pour retrouver facilement les produits. J’ai aussi appliqué un CRUD pour les codes promos : l’utilisateur peut ajouter ses propres codes promos, en renseignant le nom et le pourcentage de réduction de prix. J’ai également créé le logo de l’application.",
-            "stack": ["Angular", "Spring Boot", "Tailwind CSS", "Material UI"],
+            "skill": [{"skill": "Développement d'un système CRUD complet (Create, Read, Update, Delete)", "example": "J'ai conçu et implémenté un système de gestion permettant à l'utilisateur de créer, consulter, modifier et supprimer des produits, des catégories et des codes promos. Ce système repose sur une logique claire et modulable, facilitant l'ajout de nouvelles entités si besoin."}, {"skill": "Utilisation de la programmation réactive avec RxJS (BehaviorSubject)", "example": "Pour améliorer l'expérience utilisateur, j'ai mis en place un aperçu en temps réel des produits en cours de création ou de modification. Cette fonctionnalité permet de visualiser instantanément les données saisies, comme le nom, le prix, la catégorie ou les pictogrammes associés."}, {"skill": "Optimisation de l'expérience utilisateur (UX)", "example": "L'interface intègre des pictogrammes informatifs pour indiquer si un produit est végétarien, sans gluten ou épicé, ce qui aide à une meilleure compréhension rapide des produits. Une barre de recherche dynamique permet également de retrouver facilement un produit dans la base de données."}, {"skill": "Gestion avancée de formulaires Angular", "example": "Les formulaires prennent en charge des structures de données complexes (catégories, sous-catégories, options multiples) tout en restant intuitifs et ergonomiques pour l'utilisateur final."}, {"skill": "Création d'un module de gestion des codes promos", "example": "J'ai developpé une interface permettant d'ajouter des codes promotionnels personnalisés, avec un nom et un pourcentage de réduction. Ces éléments sont également soumis au CRUD, permettant leur gestion complète via l'application."}, {"skill": "Compétences graphiques et design UI", "example": "Pour donner une identité visuelle au projet, j'ai conçu le logo de l'application moi-même, en accord avec l'ambiance générale de l'interface."}],            
+            "stack": ["Angular", "Spring Boot", "Tailwind CSS", "Material UI", "Git/Github"],
             "link": ["https://github.com/Kaylinhh/table-tap-frontend", "https://github.com/Kaylinhh/table-tap-backend"] 
         },
         {
             "id": 2,
+            "type": "web",
             "path": "/project/2",
             "name": "Shake it!",
             "image": "assets/images/screen2.png",
             "video": "assets/videos/shakeit.mp4",
             "description": "'Shake it!' est un jeu de création de cocktails réalisé en 2 jours. A partir d’ingrédients, le joueur peut créer les cocktails de son choix. Une fois tous les ingrédients réunis dans le shaker, il suffit de Shake it! et le cocktail est prêt.",
-            "content": "L'ajout des ingrédients dans le shaker s'effectue grâce à un système de drag and drop. L'implémentation du CRUD (Create, Read, Update, Delete), permet à l'utilisateur de gérer ses cocktails existants, en modifiant les ingrédients, le nom, ou tout simplement les supprimer. J'ai également créer le logo de l'application.",
-            "stack": ["Angular", "Spring Boot", "Tailwind CSS", "PrimeNG"],
+            "skill": [{"skill": "Implémentation d'un système de drag & drop interactif", "example": "Les ingrédients sont ajoutés dans le shaker via un mécanisme de glisser-déposer, offrant une expérience utilisateur ludique et intuitive. Cela permet de composer visuellement les cocktails directement dans l'interface."}, {"skill": "Développement d'un système CRUD complet pour les cocktails", "example": "L'utilisateur peut créer de nouveaux cocktails, consulter les existants, les modifier (nom, ingrédients, etc.) ou les supprimer. Ce système assure une gestion flexible et pesonnalisée des recettes."}, {"skill": "Création d'un logo sur mesure pour l'application", "example": "J'ai réalisé le logo de l'application afin d'apporter une identité visuelle cohérente et professionnelle à l'interface."}],            
+            "stack": ["Angular", "Spring Boot", "Tailwind CSS", "PrimeNG", "Git/Github"],
             "link": ["https://github.com/Kaylinhh/shake-it-frontend", "https://github.com/Kaylinhh/shake-it-backend"] 
         },
         {
             "id": 3,
+            "type": "game",
             "path": "/project/3",
             "name": "Pachinko Game",
             "image": "assets/images/screen3.png",
             "video": "assets/videos/pachinko.mp4",
             "description": "Un jeu Pachinko où le but est de faire tomber une balle au bon endroit pour marquer le plus de points.",
-            "content": "J'ai prototypé le jeu à l'aide de formes 3D primitives. Le compteur de points permet d'obtenir un score en fonction du tag de la boîte dans laquelle la balle tombe. J'ai ajouté une musique de fond, ainsi que des effets sonores et visuels.",
-            "stack": ["C#", "Unity"],
+            "skill": [{"skill": "Prototype rapide à l'aide de formes 3D primitives", "example": "J'ai utilisé des objets simples (sphères, cubes, etc.) pour créer une base fonctionnelle du jeu, facilitant les tests de gameplay avant d'éventuelles itérations graphiques."}, {"skill": "Implémentation d'un système de drag & drop pour le contrôle de la balle", "example": "Le joueur peut déplacer la balle horizontalemenet via un mécanisme de glisser-déposer, permettant de viser dynamiquement la boîte cible."}, {"skill": "Ajout d'éléments audio et visuels pour enrichir l'expérience", "example": "Une musique de fond accompagne le joueur tout au long de la partie, et des effets sonores ainsi que visuels ont été ajoutés pour marquer les actions importantes et renforcer l'immersion."}],            
+            "stack": ["C#", "Unity", "Git/Github"],
             "link": ["https://play.unity.com/en/games/43284d74-ae6e-4fd6-87ff-8bcd2c67e9bc/pachinko-prototype"]
+        },
+        {
+            "id": 4,
+            "type": "mod",
+            "path": "/project/4",
+            "name": "Path to Menzoberranzan",
+            "image": "assets/images/screen4.png",
+            "video": "assets/videos/ptm.mp4",
+            "description": "Path to Menzoberranzan est un mod campagne Baldur's Gate 3 qui propose une toute nouvelle aventure indépendante du jeu. Il reprend des zones mythiques de Baldur's Gate 2, et se déroule dans les régions d'Athkatla et Menzoberranzan. Les joueurs pourront profiter d'une expérience immersive avec un tout nouveau gameplay, des nouveaux companions entièrement doublés, et une histoire riche. Le projet est encore en cours de développement.",
+            "skill": [{"skill": "Programmation et scripting dans le Divinity Engine 4", "example": "J'ai écrit des scripts complexes pour gérer le système de quêtes (flags, triggers, conditions) ainsi que des outils de debug. J'ai également mis en place des dialogues ramifiés, influencés par les companions présents dans le groupe, ou encore les choix du joueur."}, {"skill": "Implémentation de contenu narratif interactif", "example": "J'ai intégré des objets interactifs tels que des livres contenant du texte personalisé, et configuré les companions via des root templates complets (stats, comportements, etc.)."}, {"skill": "Création de cinématiques", "example": " J'ai généré des timelines basiques afin d'accompagner les dialogues avec des cinématiques appropriées, améliorant considérablement la mise en scène, la fluidité des interactions, et l'immersion narrative."}, {"skill": "Code review & qualité", "example": "Je participe activement à la revue de pull requests, dans une logique de QA continue pour assurer la stabilité et la cohérence du mod."}, {"skill": "Coordination interdisciplinaire", "example": "En tant que représentante de l'équipe de programmation dans une équipe interdisciplinaire, je fais le lien avec les pôles narrative design, level design, et visual design. J'assure la médiation entre les équipes, la gestion des conflits, la modération interne et le suivi des membres (staff records, actions disciplinaires, etc.)."}, {"skill": "Travail d'équipe à grande échelle & méthodologie de production", "example": "Ce projet m'a permis d'apprendre à collaborer avec une douzaine de programmeurs au sein d'un pipeline structuré (180 personnes toutes équipes confondues), à adopter un workflow plus rigoureux et à mieux intégrer les contraintes d'un projet communautaire de grande envergure."}],            
+            "stack": ["Anubis", "Osiris", "Divinity Engine 4", "Github/Github Desktop"],
+            "link": ["https://discord.gg/FaHvW5ppp9", "https://www.reddit.com/r/BG3mods/comments/1j6ok12/custom_campaign_path_to_menzoberranzan_progress/", "https://bsky.app/profile/pathtomenzo.bsky.social", "https://www.instagram.com/pathtomenzoberranzan/"]
         }
     ]

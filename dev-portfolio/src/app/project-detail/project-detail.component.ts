@@ -4,6 +4,7 @@ import { Project } from '../shared/project.model';
 import { ProjectsService } from '../shared/projects.service';
 import { CommonModule } from '@angular/common';
 import { HighlightPipe } from '../highlight.pipe';
+import { Skill } from '../shared/skill.model';
 
 @Component({
   selector: 'app-project-detail',
@@ -14,6 +15,8 @@ import { HighlightPipe } from '../highlight.pipe';
 export class ProjectDetailComponent {
 
 project!: Project;
+skillList!: Skill[];
+exampleList!: string[];
 isImageModalOpen = false;
 isVideoModalOpen = false;
 
@@ -24,6 +27,7 @@ ngOnInit() {
   const id = Number(this.route.snapshot.paramMap.get('id'));
   this.projectsService.getProjectById(id).subscribe(data => {
     this.project = data;
+    this.skillList = this.project.skill;
   })
 }
 

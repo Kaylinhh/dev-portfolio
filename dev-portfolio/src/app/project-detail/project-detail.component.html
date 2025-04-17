@@ -1,10 +1,12 @@
-<div class="mt-16 mb-32 md:mb-20 mx-4 md:flex fade-in">
+<h1 class="mt-16 text-3xl mx-6 font-bold underline">{{project.name}}</h1>
+
+<div class="mt-2 mb-32 md:mb-20 mx-6 md:flex fade-in">
 
     <div class="w-full md:w-3/4 p-2">
 
-        <div class="relative">
+        <div class="relative p-2">
 
-            <img [src]=[project.image] class="cursor-pointer hover:opacity-80 z-10 content-center" (click)="openImageModal()">
+            <img [src]=[project.image] class="cursor-pointer hover:opacity-80 z-10 content-center self-center" (click)="openImageModal()">
 
             <div *ngIf="isImageModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40" (click)="closeImageModal()">
 
@@ -21,13 +23,13 @@
             { word: 'Table Tap', tag: 'i'},
             { word: 'Shake it!', tag: 'i'},
             { word: 'Pachinko Game', tag: 'i'},
-
+            { word: 'Path to Menzoberranzan', tag: 'i'}
         ]">
         </p>
 
-        <div class="relative">
+        <div class="relative p-2">
 
-            <video autoplay muted loop [src]=[project.video] class="cursor-pointer hover:opacity-80 z-10 content-center" (click)="openVideoModal()"></video>
+            <video autoplay muted loop [src]=[project.video] class="cursor-pointer hover:opacity-80 z-10 content-center self-center" (click)="openVideoModal()"></video>
 
             <div *ngIf="isVideoModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40" (click)="closeVideoModal()">
 
@@ -38,36 +40,18 @@
             </div>
         </div>
 
-        <p 
-        class="text-justify py-4" 
-        [innerHTML]="project.content | highlight:[
-            { word: 'CRUD', tag: 'b'},
-            { word: 'Create', tag: 'i'},
-            { word: 'Read', tag: 'i'},
-            { word: 'Update', tag: 'i'},
-            { word: 'Delete', tag: 'i'},
-            { word: 'Exemple', tag: 'u'},
-            { word: 'behaviour subject', tag: 'b'},
-            { word: 'créer', tag: 'b'},
-            { word: 'modifier', tag: 'b'},
-            { word: 'modifiant', tag: 'b'},
-            { word: 'supprimer', tag: 'b'},
-            { word: 'accéder', tag: 'b'},
-            { word: 'gérer', tag: 'b'},
-            { word: 'ai prototypé', tag: 'b'},
-            { word: 'compteur', tag: 'b'},
-            { word: 'tag', tag: 'i'},
-
-
-        ]">
-        </p>
-
+        <ul>
+            <li *ngFor="let skill of skillList" class="py-2">
+                <p class="text-justify font-bold"> {{skill.skill}} </p>
+                <p class="text-justify"> {{skill.example}} </p>
+            </li>
+        </ul>
 
     </div>
 
     <div class="w-full md:w-1/5 md:mx-4 md:fixed md:top-20 md:right-0 z-30">
 
-        <li class="list-none p-2">
+        <li class="list-none pb-2">
 
             <span class="font-semibold">Technologies utilisées:</span>
 
@@ -77,7 +61,7 @@
 
         </li>
 
-        <div *ngIf="project.link.length > 1" class="p-2">
+        <div *ngIf="project.type == 'web'" class="">
 
             <li class="list-none">
 
@@ -94,7 +78,7 @@
 
         </div>
 
-        <div *ngIf="project.link.length == 1" class="p-2">
+        <div *ngIf="project.type == 'game'" class="">
 
             <li class="list-none">
 
@@ -102,6 +86,29 @@
 
                 <ul>
                     <a [href]=[project.link[0]] class="underline text-teal-700">Jeu</a>
+                </ul>
+
+            </li>
+
+        </div>
+
+        <div *ngIf="project.type == 'mod'" class="">
+
+            <li class="list-none">
+
+                <span class="font-semibold">Réseaux:</span>
+
+                <ul>
+                    <a [href]=[project.link[0]] class="underline text-teal-700">Discord</a>
+                </ul>
+                <ul>
+                    <a [href]=[project.link[1]] class="underline text-teal-700">Reddit</a>
+                </ul>
+                <ul>
+                    <a [href]=[project.link[2]] class="underline text-teal-700">BlueSky</a>
+                </ul>
+                <ul>
+                    <a [href]=[project.link[2]] class="underline text-teal-700">Instagram</a>
                 </ul>
 
             </li>
