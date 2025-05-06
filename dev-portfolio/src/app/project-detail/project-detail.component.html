@@ -6,7 +6,7 @@
 
         <div class="relative p-2">
 
-            <img [src]=[project.image] class="cursor-pointer hover:opacity-80 z-10 content-center self-center" (click)="openImageModal()">
+            <img [src]=[project.image] class="cursor-pointer hover:opacity-80 z-10 justify-self-center" (click)="openImageModal()">
 
             <div *ngIf="isImageModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40" (click)="closeImageModal()">
 
@@ -29,7 +29,7 @@
 
         <div class="relative p-2">
 
-            <video autoplay muted loop [src]=[project.video] class="cursor-pointer hover:opacity-80 z-10 content-center self-center" (click)="openVideoModal()"></video>
+            <video autoplay muted loop [src]=[project.video] class="cursor-pointer hover:opacity-80 z-10 justify-self-center" (click)="openVideoModal()"></video>
 
             <div *ngIf="isVideoModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40" (click)="closeVideoModal()">
 
