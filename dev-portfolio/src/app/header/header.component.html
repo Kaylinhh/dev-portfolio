@@ -1,17 +1,36 @@
-
-<div   [ngClass]="{'translate-y-0': isVisible, 'translate-y-[100vh]': !isVisible}"
-class="fixed mb-2 w-full left-0 right-0 transition-transform duration-[1500ms] ease-in-out delay-100 bg-black">
-
-    <ul class="flex w-full">
-
-        <li *ngFor="let nav of navList" 
-        [routerLink]="[nav.path]"
-        routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{exact: false}" 
-        class="m-4 text-2xl active:text-teal-700 active:font-medium hover:text-teal-700 focus:text-teal-700 focus:font-semibold cursor-pointer">
+<div [ngClass]="{'translate-y-0': isVisible, 'translate-y-[100vh]': !isVisible}"
+     class="fixed mb-2 w-full left-0 right-0 transition-transform duration-[1500ms] ease-in-out delay-100 bg-black">
+  
+  <div class="flex justify-between items-center w-full">
+    <!-- Navigation à gauche -->
+    <ul class="flex">
+      <li *ngFor="let nav of navList" 
+          [routerLink]="[nav.path]"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{exact: false}" 
+          class="m-4 text-2xl active:text-teal-700 active:font-medium hover:text-teal-700 focus:text-teal-700 focus:font-semibold cursor-pointer">
         {{nav.label}}
-        </li>
-    
+      </li>
     </ul>
 
+    <!-- Language toggle à droite -->
+    <div class="flex items-center mr-6 text-lg">
+      <button 
+        (click)="switchLanguage('fr')" 
+        [class.text-teal-700]="(currentLang$ | async) === 'fr'"
+        [class.font-semibold]="(currentLang$ | async) === 'fr'"
+        class="hover:text-teal-700 transition-colors cursor-pointer">
+        FR
+      </button>
+      <span class="mx-2 text-gray-400">|</span>
+      <button 
+        (click)="switchLanguage('en')" 
+        [class.text-teal-700]="(currentLang$ | async) === 'en'"
+        [class.font-semibold]="(currentLang$ | async) === 'en'"
+        class="hover:text-teal-700 transition-colors cursor-pointer">
+        EN
+      </button>
+    </div>
+  </div>
+  
 </div>

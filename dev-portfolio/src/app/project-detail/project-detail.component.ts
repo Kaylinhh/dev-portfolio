@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from '../shared/project.model';
 import { ProjectsService } from '../shared/projects.service';
+import { LanguageService } from '../shared/language.service';
 import { CommonModule } from '@angular/common';
 import { HighlightPipe } from '../highlight.pipe';
 import { Skill } from '../shared/skill.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-project-detail',
@@ -12,39 +14,54 @@ import { Skill } from '../shared/skill.model';
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss'
 })
-export class ProjectDetailComponent {
+export class ProjectDetailComponent implements OnInit, OnDestroy {
+  project!: Project;
+  skillList!: Skill[];
+  isImageModalOpen = false;
+  isVideoModalOpen = false;
+  
+  private langSubscription?: Subscription;
 
-project!: Project;
-skillList!: Skill[];
-exampleList!: string[];
-isImageModalOpen = false;
-isVideoModalOpen = false;
+  constructor(
+    private route: ActivatedRoute, 
+    private projectsService: ProjectsService,
+    private languageService: LanguageService
+  ) {}
 
+  ngOnInit() {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    
+    this.langSubscription = this.languageService.currentLang$.subscribe(() => {
+      this.loadProject(id);
+    });
+  }
 
-  constructor(private route: ActivatedRoute, private projectsService: ProjectsService) {}
+  loadProject(id: number) {
+    this.projectsService.getProjectById(id).subscribe(data => {
+      if (data) {
+        this.project = data;
+        this.skillList = this.project.skill;
+      }
+    });
+  }
 
-ngOnInit() {
-  const id = Number(this.route.snapshot.paramMap.get('id'));
-  this.projectsService.getProjectById(id).subscribe(data => {
-    this.project = data;
-    this.skillList = this.project.skill;
-  })
-}
+  ngOnDestroy() {
+    this.langSubscription?.unsubscribe();
+  }
 
-openImageModal(): void {
-  this.isImageModalOpen = true;
-}
+  openImageModal(): void {
+    this.isImageModalOpen = true;
+  }
 
-openVideoModal(): void {
-  this.isVideoModalOpen = true;
-}
+  openVideoModal(): void {
+    this.isVideoModalOpen = true;
+  }
 
-closeImageModal(): void {
-  this.isImageModalOpen = false;
-}
+  closeImageModal(): void {
+    this.isImageModalOpen = false;
+  }
 
-closeVideoModal(): void {
-  this.isVideoModalOpen = false;
-}
-
+  closeVideoModal(): void {
+    this.isVideoModalOpen = false;
+  }
 }

@@ -1,34 +1,53 @@
 <div class="mt-14 mb-32 md:mb-20 sm:flex fade-in">
-
     <img src="assets/images/photo2.jpg" class="w-3/4 h-3/4 md:w-1/4 lg:pl-12 md:pl-8 mx-auto p-4 md:shrink-0 self-center">
-
+    
     <div class="w-full mt-2 px-6 lg:px-12 md:px-8 text-justify content-center">
-
-        <div class="pb-4">
-            Salut ! Je m'appelle Julie, et je suis développeuse.
-        </div>
-
-        <div class="pb-4">
-            J'ai des connaissances dans le web, notamment avec <b>Angular</b> et <b>Spring Boot</b>,
-            mais aussi dans le jeu vidéo, avec <b>Unity</b> ou le <b>Divinity Engine 4</b>.
-            Je m'épanouis dans la conception de projets qui mêlent 
-            technologie et créativité.
-            Je parle également couramment anglais : j'ai étudié à l'étranger, et j'ai travaillé 4 ans dans un pub irlandais !
-        </div>
-
-        <div class="pb-4">
-
-            Mon objectif est de travailler dans l'industrie du jeu vidéo, où je pourrais offrir une expérience captivante pour les joueurs.
-            Quand je ne suis pas en train de coder, vous me trouverez probablement à streamer des jeux sur Twitch, ou à expérimenter de nouvelles idées pour mon prochain projet.
-            
-        </div>
-
-        <div class="">
-            Explorez mon portfolio, mon <a href="https://www.github.com/kaylinhh" class="underline text-teal-700">Github</a>        
-            et mon <a href="https://play.unity.com/en/user/ccb5eb3e-1b9f-4f9c-adb3-181cf85b901d" class="underline text-teal-700">
-            Unity Play</a>, ou encore,  mon <a href="https://www.canva.com/design/DAG13u4QpaE/YjDLqNwWLW0ceneVGP2ScQ/view?utm_content=DAG13u4QpaE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h26854d6fa5" class="underline text-teal-700">CV</a> pour en savoir plus, et n'hésitez pas à me contacter pour échanger ou collaborer !
-        </div>
         
-    </div>
+        <!-- VERSION FRANÇAISE -->
+        <ng-container *ngIf="(currentLang$ | async) === 'fr'">
+            <div class="pb-4">
+                Salut ! Je m'appelle Julie, et je suis développeuse.
+            </div>
+            <div class="pb-4">
+                J'ai des connaissances dans le web, notamment avec <b>Angular</b> et <b>Spring Boot</b>,
+                mais aussi dans le jeu vidéo, avec <b>Unity</b> ou le <b>Divinity Engine 4</b>.
+                Je m'épanouis dans la conception de projets qui mêlent 
+                technologie et créativité.
+            </div>
+            <div class="pb-4">
+                Mon objectif est de travailler dans l'industrie du jeu vidéo, où je pourrais offrir une expérience captivante pour les joueurs.
+                Quand je ne suis pas en train de coder, vous me trouverez probablement à streamer des jeux sur Twitch, ou à expérimenter de nouvelles idées pour mon prochain projet.
+            </div>
+            <div class="">
+                Explorez mon portfolio, mon <a href="https://www.github.com/kaylinhh" class="underline text-teal-700">Github</a>        
+                et mon <a href="https://play.unity.com/en/user/ccb5eb3e-1b9f-4f9c-adb3-181cf85b901d" class="underline text-teal-700">Unity Play</a>, 
+                ou encore, mon <a href="https://canva.link/n3iupgfn95qu1ll" class="underline text-teal-700">CV</a> 
+                pour en savoir plus, et n'hésitez pas à me contacter pour échanger ou collaborer !
+            </div>
+        </ng-container>
 
+        <!-- VERSION ANGLAISE -->
+        <ng-container *ngIf="(currentLang$ | async) === 'en'">
+            <div class="pb-4">
+                Hi! My name is Julie, and I'm a developer.
+            </div>
+            <div class="pb-4">
+                I have experience in web development, particularly with <b>Angular</b> and <b>Spring Boot</b>,
+                as well as in game development, using <b>Unity</b> or the <b>Divinity Engine 4</b>.
+                I thrive in designing projects that blend 
+                technology and creativity.
+            </div>
+            <div class="pb-4">
+                My goal is to work in the video game industry, where I could provide a captivating experience for players.
+                When I'm not coding, you'll probably find me streaming games on Twitch or experimenting with new ideas for my next project.
+            </div>
+            <div class="">
+                Explore my portfolio, my <a href="https://www.github.com/kaylinhh" class="underline text-teal-700">Github</a>        
+                and my <a href="https://play.unity.com/en/user/ccb5eb3e-1b9f-4f9c-adb3-181cf85b901d" class="underline text-teal-700">Unity Play</a>, 
+                or check out my <a href="https://canva.link/75557eogfg74sy3" class="underline text-teal-700">CV</a> 
+                to learn more, and feel free to contact me to chat or collaborate!
+            </div>
+        </ng-container>
+
+    </div>
 </div>

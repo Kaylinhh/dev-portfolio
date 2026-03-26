@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "type": "web",
+        "path": "/project/1",
+        "name": "Web - Table Tap",
+        "image": "assets/images/screen01.png",
+        "video": "assets/videos/tabletap.mp4",
+        "description": "Table Tap is a web application allowing customers to order directly at their table in a bar/restaurant. Orders are then sent to the kitchen, where staff can validate and serve them. The admin side allows management of available menu products and access to sales statistics on the dashboard. This project was completed by a team of 3 people in 7 weeks.",
+        "skill": [
+            {"skill": "Development of a complete CRUD system (Create, Read, Update, Delete)", "example": "I designed and implemented a management system allowing users to create, view, modify, and delete products, categories, and promo codes. This system is based on clear and modular logic, facilitating the addition of new entities as needed."},
+            {"skill": "Use of reactive programming with RxJS (BehaviorSubject)", "example": "To improve user experience, I implemented a real-time preview of products being created or modified. This feature allows instant visualization of entered data, such as name, price, category, or associated icons."},
+            {"skill": "User experience (UX) optimization", "example": "The interface includes informative icons to indicate whether a product is vegetarian, gluten-free, or spicy, helping users quickly understand product characteristics. A dynamic search bar also allows easy retrieval of products from the database."},
+            {"skill": "Advanced Angular form management", "example": "Forms handle complex data structures (categories, subcategories, multiple options) while remaining intuitive and user-friendly."},
+            {"skill": "Creation of a promo code management module", "example": "I developed an interface for adding custom promotional codes with a name and discount percentage. These elements are also subject to CRUD operations, allowing complete management through the application."},
+            {"skill": "Graphic skills and UI design", "example": "To give the project a visual identity, I designed the application logo myself, in harmony with the overall interface atmosphere."}
+        ],            
+        "stack": ["Angular", "Spring Boot", "Tailwind CSS", "Material UI", "Git/Github"],
+        "link": ["https://github.com/Kaylinhh/table-tap-frontend", "https://github.com/Kaylinhh/table-tap-backend"]
+    },
+    {
+        "id": 2,
+        "type": "web",
+        "path": "/project/2",
+        "name": "Web - Shake it!",
+        "image": "assets/images/screen02.png",
+        "video": "assets/videos/shakeit.mp4",
+        "description": "'Shake it!' is a cocktail creation game made in 2 days. Using ingredients, players can create cocktails of their choice. Once all ingredients are gathered in the shaker, just Shake it! and the cocktail is ready.",
+        "skill": [
+            {"skill": "Implementation of an interactive drag & drop system", "example": "Ingredients are added to the shaker via a drag-and-drop mechanism, offering a playful and intuitive user experience. This allows visual cocktail composition directly in the interface."},
+            {"skill": "Development of a complete CRUD system for cocktails", "example": "Users can create new cocktails, view existing ones, modify them (name, ingredients, etc.), or delete them. This system ensures flexible and personalized recipe management."},
+            {"skill": "Custom logo creation for the application", "example": "I created the application logo to bring a coherent and professional visual identity to the interface."}
+        ],            
+        "stack": ["Angular", "Spring Boot", "Tailwind CSS", "PrimeNG", "Git/Github"],
+        "link": ["https://github.com/Kaylinhh/shake-it-frontend", "https://github.com/Kaylinhh/shake-it-backend"]
+    },
+    {
+        "id": 3,
+        "type": "game",
+        "path": "/project/3",
+        "name": "Unity - Pachinko Game",
+        "image": "assets/images/screen03.png",
+        "video": "assets/videos/pachinko.mp4",
+        "description": "A Pachinko game where the goal is to drop a ball in the right place to score the most points.",
+        "skill": [
+            {"skill": "Rapid prototyping using primitive 3D shapes", "example": "I used simple objects (spheres, cubes, etc.) to create a functional game foundation, facilitating gameplay testing before potential graphic iterations."},
+            {"skill": "Implementation of a drag & drop system for ball control", "example": "Players can move the ball horizontally via a drag-and-drop mechanism, allowing dynamic targeting of the target box."},
+            {"skill": "Addition of audio and visual elements to enrich the experience", "example": "Background music accompanies the player throughout the game, and sound effects as well as visual effects were added to mark important actions and enhance immersion."}
+        ],            
+        "stack": ["C#", "Unity", "Git/Github"],
+        "link": ["https://play.unity.com/en/games/43284d74-ae6e-4fd6-87ff-8bcd2c67e9bc/pachinko-prototype"]
+    },
+    {
+        "id": 4,
+        "type": "mod",
+        "path": "/project/4",
+        "name": "Mod - Path to Menzoberranzan",
+        "image": "assets/images/screen04.png",
+        "video": "assets/videos/ptm.mp4",
+        "description": "Path to Menzoberranzan is a Baldur's Gate 3 campaign mod offering an entirely new adventure independent from the base game. It features iconic zones from Baldur's Gate 2, taking place in the regions of Athkatla and Menzoberranzan. Players will enjoy an immersive experience with brand new gameplay, fully voice-acted companions, and a rich story. The project is still in development.",
+        "skill": [
+            {"skill": "Technical Gameplay Lead", "example": "After only a few months on the project, I was promoted to Technical Gameplay Lead. I now oversee the implementation of gameplay, mechanics, and player-oriented systems. I notably designed the gameplay portion of the technical skill check used to recruit new programmers."},
+            {"skill": "Programming and scripting in Divinity Engine 4", "example": "I wrote complex scripts to manage the quest system (flags, triggers, conditions) as well as debug scripts. I also implemented branching dialogues influenced by companions present in the party or player choices."},
+            {"skill": "Implementation of interactive narrative content", "example": "I integrated interactive objects such as books containing custom text, and configured companions via complete root templates (stats, behaviors, etc.)."},
+            {"skill": "Cutscene creation", "example": "I generated basic timelines to accompany dialogues with appropriate cinematics, significantly improving staging, interaction fluidity, and narrative immersion."},
+            {"skill": "Code review & quality", "example": "I participated in pull request reviews, with a continuous QA approach to ensure mod stability and consistency."},
+            {"skill": "Internal documentation and tutorial writing", "example": "I created a complex dialogue example that was used as a reference and learning tool for new team members. I also helped write internal documentation to standardize programming and integration best practices and facilitate team onboarding."},
+            {"skill": "Interdisciplinary coordination", "example": "As the programming team representative in an interdisciplinary team, I ensure mediation between teams, conflict management, internal moderation, and member tracking (staff records, disciplinary actions, etc.)."},
+            {"skill": "Large-scale teamwork & production methodology", "example": "This project allowed me to learn to collaborate with a dozen programmers within a structured pipeline (180 people across all teams), adopt a more rigorous workflow, and better integrate the constraints of a large-scale community project."}
+        ],            
+        "stack": ["Anubis", "Osiris", "Divinity Engine 4", "Github/Github Desktop"],
+        "link": ["https://discord.gg/FaHvW5ppp9", "https://www.reddit.com/r/BG3mods/comments/1j6ok12/custom_campaign_path_to_menzoberranzan_progress/", "https://bsky.app/profile/pathtomenzo.bsky.social", "https://www.instagram.com/pathtomenzoberranzan/"]
+    },
+    {
+        "id": 5,
+        "type": "game",
+        "path": "/project/5",
+        "name": "Unity - UI Flow",
+        "image": "assets/images/screen05.png",
+        "video": "assets/videos/uigameflow.mp4",
+        "description": "This project consists of implementing a complete menu system for a video game, including management of main player options. It covers essential features such as volume control, fullscreen mode, preference saving, and navigation between different game scenes. The goal was to design a solid, reusable, and easily extensible foundation for future projects.",
+        "skill": [
+            {"skill": "Creation of a functional options menu", "example": "I designed and implemented an options menu allowing players to modify game settings in real-time, with a clear and accessible interface."},
+            {"skill": "Audio volume management", "example": "Implementation of sliders to adjust volume (music and SFX), with immediate application of changes in-game."},
+            {"skill": "Fullscreen toggle implementation", "example": "Addition of a system allowing activation or deactivation of fullscreen mode from the options menu."},
+            {"skill": "Player preference saving with PlayerPrefs", "example": "Player-chosen settings (volume, fullscreen) are saved and automatically restored at game launch through the use of PlayerPrefs."},
+            {"skill": "Scene Flow Management", "example": "Implementation of navigation logic between different game scenes (main menu, game, return to menu), ensuring smooth and consistent transitions between game states."},
+            {"skill": "Scene transitions with fade in / fade out", "example": "Implementation of a visual transition system between scenes to improve readability and user comfort during game state changes."}
+        ],
+        "stack": ["C#", "Unity", "Git/Github"],
+        "link": ["https://play.unity.com/en/games/5a1ab1cb-e398-40d1-b402-ba122fa7c823/unity-ui-scene-flow-prototype"]
+    },
+    {
+        "id": 6,
+        "type": "game",
+        "path": "/project/6",
+        "name": "Unity - Arcade pickup game",
+        "image": "assets/images/screen06.png",
+        "video": "assets/videos/arcadepickupgame.mp4",
+        "description": "This project is a small 2D Unity prototype highlighting UI management, gameplay, and audio systems. The player collects pickups while staying in the play area, with score, timer, and highscore persistence.",
+        "skill": [
+            {"skill": "Player movement", "example": "Implementation of a smooth control system using Player Input."},
+            {"skill": "Pickups", "example": "Random pickup generation via a PickupSpawner, with spawn zone verification to prevent objects from leaving the screen."},
+            {"skill": "Score", "example": "Creation of a score system that increments upon pickup collection, allowing player progress tracking."},
+            {"skill": "Timer & Game Over", "example": "Addition of a timer limiting game duration and a Game Over panel with options to restart the game."},
+            {"skill": "Highscore", "example": "Implementation of a persistent highscore system using PlayerPrefs, to save and display the best score between game sessions."}
+        ],
+        "stack": ["C#", "Unity", "Git/Github"],
+        "link": ["https://play.unity.com/en/games/ed5e8940-cc56-4950-bf33-2c80491b74ab/arcade-pickup-game"]
+    },
+    {
+        "id": 7,
+        "type": "game",
+        "path": "/project/7",
+        "name": "Unity - Nova, a bartending game (prototype)",
+        "image": "assets/images/screen07.png",
+        "video": "assets/videos/nova.mp4",
+        "description": "Nova is a narrative visual novel developed in Unity, where the player takes on the role of a bartender serving cocktails to clients with unique personalities. The game blends branching narrative (via Ink) with interactive mixology gameplay, featuring a recipe discovery system and relationship progression.",
+        "skill": [
+            {"skill": "Art direction and asset creation", "example": "I designed all game visuals: characters, backgrounds, UI, and interface elements, creating a cohesive visual identity centered around the night bar atmosphere."},
+            {"skill": "Narrative writing and game design", "example": "I wrote the entire scenario and dialogues using the Ink language, creating three characters with distinct personalities and designing a branching narrative system with relationship progression."},
+            {"skill": "Modular software architecture", "example": "I structured the project with reusable and extensible systems. The game's grimoire uses a generic system capable of displaying both character profiles and cocktail recipes, making it easy to add new content without rewriting code."},
+            {"skill": "Ink & Unity narrative integration", "example": "I used an existing Ink wrapper and developed the narrative flow logic, including the pause/resume dialogue system during transitions to the mixology mini-game and back to the main scene, ensuring smooth narrative continuity."},
+            {"skill": "Progression and discovery system", "example": "I created a data manager that saves player progression (characters met, recipes discovered) in memory only for a smooth prototype experience. The system automatically notifies the interface of new discoveries through an event system."},
+            {"skill": "Interactive mixology mini-game", "example": "I developed a drag & drop system allowing players to drag ingredients into a shaker, with dynamic reparenting to display elements above the entire interface. The game verifies if the combination matches an existing recipe, properly handling duplicate ingredients."},
+            {"skill": "Complex user interfaces", "example": "I designed multiple screens: a double-page grimoire with navigation, a dialogue history with character-based coloring, mouse-following tooltips, and an end-of-day screen progressively revealing cards of encountered characters. I added smooth animations (glass shaking, bounce effect appearance, fade transitions)."},
+            {"skill": "Advanced scene management", "example": "I implemented a system dynamically loading and unloading scenes (bar, main scene, card screen) while maintaining game state. The system automatically detects where the player comes from to resume dialogue at the correct point."},
+            {"skill": "Audio-visual polish", "example": "I integrated an audio manager with music playlist (shuffle/loop), interface sounds, and sound effects synchronized with animations. I used coroutines to detect track endings without continuous checking, optimizing performance."},
+            {"skill": "Additional arcade mode", "example": "I added an arcade mode allowing players to enjoy only the mixology mini-game without narrative progression, with automatic game mode detection and interface adaptation (Reset button instead of Serve, skipping the discovery system)."},
+            {"skill": "Refactoring and code quality", "example": "I performed thorough cleanup of the entire project (30+ scripts): removing debug logs, adding comprehensive documentation, code optimization, and safeguarding against common errors. I particularly focused on readability and maintainability to facilitate future development."},
+            {"skill": "Technical bug resolution", "example": "I diagnosed and fixed several complex issues related to scene loading timing, code duplication, and protecting internal data against accidental modifications."},
+            {"skill": "Unity skill advancement", "example": "This project allowed me to master advanced Unity aspects: event systems for component decoupling, Canvas and RectTransform manipulation for UI, coroutines for animations, GameObject lifecycle, and architecture with generic interfaces."}
+        ],                        
+        "stack": ["C#", "Unity", "Ink", "Git/Github"],
+        "link": ["https://play.unity.com/en/games/70a1edc4-7bc9-49f0-a3d5-118592e5a4d0/nova-prototype"]
+    }
+]

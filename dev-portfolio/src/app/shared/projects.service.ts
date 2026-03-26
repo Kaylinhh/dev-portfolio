@@ -1,31 +1,40 @@
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable, signal } from '@angular/core';
-import { map, Observable, tap } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
+import { LanguageService } from './language.service';
 import { Project } from './project.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectsService {
+  constructor(
+    private http: HttpClient,
+    private languageService: LanguageService
+  ) {}
 
-  url: string = 'assets/data/projects.json';
-
-  constructor(private http: HttpClient) {}
-
-  getAllProjects(): Observable<Project[]> {
-    return this.http.get<Project[]>(this.url);
+  getProjectList(): Observable<Project[]> {
+    return this.http.get<Project[]>(`assets/data/projects-fr.json`);
   }
 
-  getProjectById(id: number): Observable<Project> {
-    return this.http.get<Project[]>(this.url).pipe(
-      map(projects => {
-        const project = projects.find(project => project.id === id);
-        if (!project) {
-          throw new Error(`Project with id ${id} not found`);
-        }
-        return project;
+  getProjects(): Observable<Project[]> {
+    return this.languageService.currentLang$.pipe(
+      switchMap(lang => {
+        const file = lang === 'fr' ? 'projects-fr.json' : 'projects-en.json';
+        return this.http.get<Project[]>(`assets/data/${file}`); 
       })
     );
   }
-  
+
+  getProjectById(id: number): Observable<Project> {
+    return this.languageService.currentLang$.pipe(
+      switchMap(lang => {
+        const file = lang === 'fr' ? 'projects-fr.json' : 'projects-en.json';
+        return this.http.get<Project[]>(`assets/data/${file}`).pipe(
+          map((projects: Project[]) => projects.find(p => p.id === id)!)
+        );
+      })
+    );
+  }
 }
