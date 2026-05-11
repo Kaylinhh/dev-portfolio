@@ -81,5 +81,43 @@
             "skill": [{"skill": "Architecture logicielle modulaire", "example": "J'ai structuré le projet avec des systèmes réutilisables et extensibles. Par exemple, le grimoire du jeu utilise un seul système générique capable d'afficher à la fois les fiches de personnages et les recettes de cocktails, facilitant l'ajout de nouveaux contenus sans réécrire de code."}, {"skill": "Intégration narrative Ink & Unity", "example": "J'ai utilisé et adapté un wrapper Ink existant pour gérer la narration du jeu. J'ai développé la logique du flow narratif, notamment le système de pause/reprise du dialogue lors des transitions vers le mini-jeu de mixologie et le retour à la scène principale, assurant une continuité narrative fluide entre les différentes phases de jeu."}, {"skill": "Système de progression et de découverte", "example": "J'ai créé un gestionnaire de données qui permet de sauvegarder la progression du joueur (personnages rencontrés, recettes découvertes) uniquement en mémoire, réinitialisant chaque session pour une expérience de prototype fluide. Le système notifie automatiquement l'interface lors de nouvelles découvertes."}, {"skill": "Mini-jeu de mixologie interactif", "example": "J'ai développé un système de drag & drop permettant de glisser des ingrédients dans un shaker. "}, {"skill": "Interfaces utilisateur complexes", "example": "J'ai conçu plusieurs écrans : un grimoire à double-page avec navigation, un historique de dialogue avec coloration par personnage, des tooltips suivant la souris, et un écran de fin de journée révélant progressivement les cartes des personnages rencontrés. J'ai ajouté des animations fluides (shake du verre, apparition avec effet rebond, transitions en fondu)."}, {"skill": "Gestion avancée de scènes", "example": "J'ai mis en place un système chargeant et déchargeant dynamiquement les scènes (bar, scène principale, écran de cartes) tout en maintenant l'état du jeu. Le système détecte automatiquement d'où vient le joueur pour reprendre le dialogue au bon endroit."}, {"skill": "Polish audiovisuel", "example": "J'ai intégré un gestionnaire audio avec playlist musicale (shuffle/loop), sons d'interface, et effets sonores synchronisés aux animations pour renforcer l'immersion."}, {"skill": "Refactoring et qualité de code", "example": "J'ai effectué un nettoyage approfondi de l'ensemble du projet (30+ scripts) : suppression des logs de debug, ajout de documentation, optimisation du code, et sécurisation contre les erreurs courantes. J'ai particulièrement travaillé sur la lisibilité et la maintenabilité pour faciliter les évolutions futures."}, {"skill": "Montée en compétences Unity", "example": "Ce projet m'a permis de maîtriser des aspects avancés d'Unity : systèmes d'événements pour découpler les composants, manipulation du Canvas et des RectTransforms pour l'UI, coroutines pour les animations, et cycle de vie des GameObjects."}, {"skill": "Création d'assets et écriture narrative", "example": "J'ai conçu l'ensemble des visuels du jeu : personnages, backgrounds, UI et éléments d'interface. J'ai écrit l'intégralité du scénario et des dialogues via le langage Ink, en créant trois personnages aux personnalités distinctes et en concevant un système de dialogue ramifiée."}],                        
             "stack": ["C#", "Unity", "Git/Github"],
             "link": ["https://play.unity.com/fr/games/70a1edc4-7bc9-49f0-a3d5-118592e5a4d0/nova-prototype"]
+        },
+        {
+            "id": 8,
+            "type": "game",
+            "path": "/project/8",
+            "name": "Unity - Ghost Tamagotchi",
+            "image": "assets/images/screen08.png",
+            "video": "assets/videos/ghosttamagotchi.mp4",
+            "description": "Ghost Tamagotchi est un jeu Unity 2D où le joueur s'occupe d'un petit fantôme avec des besoins à gérer et un système d'évolution narratif. Le jeu mêle gestion de stats en temps réel et choix d'évolution influençant l'apparence du fantôme à travers trois stades de vie : bébé, ado et adulte.",
+            "skill": [
+                {
+                "skill": "Architecture événementielle C#",
+                "example": "J'ai structuré le projet autour d'un système d'Actions C# pour découpler complètement les composants. GhostStats ne connaît pas l'UI, GhostUI ne connaît pas le SpriteManager - chaque système s'abonne aux événements dont il a besoin sans dépendances directes, éliminant les risques de memory leaks."
+                },
+                {
+                "skill": "Système d'évolution narratif",
+                "example": "J'ai conçu un système de progression en trois stades avec des pop-ups d'évolution proposant quatre choix au joueur, dont une option aléatoire. Chaque choix influence le sprite final du fantôme. Le système gère la pause des stats pendant les choix et s'arrête proprement une fois le stade adulte atteint."
+                },
+                {
+                "skill": "Gestion d'états et feedback visuel",
+                "example": "J'ai implémenté un système de couleurs dynamiques sur les barres de stats (vert / orange / rouge selon les seuils) et une fin de partie conditionnelle selon les deux issues possibles : game over si une stat tombe à zéro, ou fin heureuse si le fantôme atteint l'âge adulte."
+                },
+                {
+                "skill": "AudioManager et intégration sonore",
+                "example": "J'ai intégré un gestionnaire audio centralisé gérant la musique de fond en boucle et les effets sonores."
+                },
+                {
+                "skill": "Animation et polish",
+                "example": "J'ai ajouté une animation de va-et-vient au fantôme avec flip horizontal automatique et pauses aléatoires pour donner de la vie au personnage, ainsi qu'un countdown visible avant chaque évolution pour maintenir l'engagement du joueur."
+                },
+                {
+                "skill": "Build WebGL et déploiement",
+                "example": "J'ai configuré le Canvas Scaler pour adapter l'UI à différentes résolutions et déployé le jeu en WebGL sur Unity Play."
+                }
+            ],
+            "stack": ["Unity", "C#", "Git/GitHub", "Claude Code"],
+            "link": ["https://github.com/Kaylinhh/ghost-tamagotchi", "https://play.unity.com/en/games/2695cfae-82b1-47a6-8c14-1513ebf141ba/ghost-tamagotchi-prototype"]
         }
+
     ] 

@@ -133,5 +133,42 @@
         ],                        
         "stack": ["C#", "Unity", "Ink", "Git/Github"],
         "link": ["https://play.unity.com/en/games/70a1edc4-7bc9-49f0-a3d5-118592e5a4d0/nova-prototype"]
+    },
+    {
+        "id": 8,
+        "type": "game",
+        "path": "/project/8",
+        "name": "Unity - Ghost Tamagotchi",
+        "image": "assets/images/screen08.png",
+        "video": "assets/videos/ghosttamagotchi.mp4",
+        "description": "Ghost Tamagotchi is a Unity 2D game where the player takes care of a little ghost with needs to manage and a narrative evolution system. The game combines real-time stat management with evolution choices that influence the ghost's appearance across three life stages: baby, teen, and adult.",
+        "skill": [
+            {
+            "skill": "Event-driven C# architecture",
+            "example": "I structured the project around a C# Actions system to fully decouple components. GhostStats doesn't know about the UI, GhostUI doesn't know about the SpriteManager - each system subscribes to the events it needs with no direct dependencies, eliminating memory leak risks."
+            },
+            {
+            "skill": "Narrative evolution system",
+            "example": "I designed a three-stage progression system with evolution pop-ups offering four player choices, including a random option. Each choice influences the ghost's final sprite. The system pauses stat decay during choices and stops cleanly once the adult stage is reached."
+            },
+            {
+            "skill": "State management and visual feedback",
+            "example": "I implemented a dynamic color system on the stat bars (green / orange / red based on thresholds) and conditional end states: game over if a stat reaches zero, or a happy ending if the ghost reaches adulthood."
+            },
+            {
+            "skill": "AudioManager and sound integration",
+            "example": "I built a centralized audio manager handling looping background music and sound effects."
+            },
+            {
+            "skill": "Animation and polish",
+            "example": "I added a back-and-forth animation to the ghost with automatic horizontal flip and random pauses to bring the character to life, along with a visible countdown before each evolution to keep the player engaged."
+            },
+            {
+            "skill": "WebGL build and deployment",
+            "example": "I configured the Canvas Scaler to adapt the UI to different resolutions and deployed the game as a WebGL build on Unity Play."
+            }
+        ],
+        "stack": ["Unity", "C#", "Git/GitHub", "Claude Code"],
+        "link": ["https://github.com/Kaylinhh/ghost-tamagotchi", "https://play.unity.com/en/games/2695cfae-82b1-47a6-8c14-1513ebf141ba/ghost-tamagotchi-prototype"]
     }
 ]
