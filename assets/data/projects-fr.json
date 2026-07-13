@@ -151,6 +151,10 @@
             {
                 "skill": "Descriptions de cartes dynamiques",
                 "example": "Chaque CardEffect implémente une méthode GetDescription(CombatContext) qui retourne une description en temps réel reflétant les modificateurs actifs. Les cartes boostées par Force affichent leur valeur de dégâts modifiée en vert via le rich text de TextMeshPro, mise à jour à chaque rafraîchissement de la main."
+            },
+            {
+                "skill": "Création d'assets pixel art (WIP)",
+                "example": "J'ai créé l'ensemble des visuels du jeu sous Aseprite : sprites de personnages avec animations idle et attaque, icônes UI pour les effets de status et les intentions ennemies."
             }
         ],
         "stack": ["C#", "Unity", "Git/Github", "Claude Code"],
