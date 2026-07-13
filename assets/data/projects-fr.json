@@ -85,9 +85,9 @@
         {
             "id": 8,
             "type": "game",
-            "path": "/project/8",
+            "path": "/project/9",
             "name": "Unity - Ghost Tamagotchi",
-            "image": "assets/images/screen08.png",
+            "image": "assets/images/screen0.png",
             "video": "assets/videos/ghosttamagotchi.mp4",
             "description": "Ghost Tamagotchi est un jeu Unity 2D où le joueur s'occupe d'un petit fantôme avec des besoins à gérer et un système d'évolution narratif. Le jeu mêle gestion de stats en temps réel et choix d'évolution influençant l'apparence du fantôme à travers trois stades de vie : bébé, ado et adulte.",
             "skill": [
@@ -118,6 +118,43 @@
             ],
             "stack": ["Unity", "C#", "Git/GitHub", "Claude Code"],
             "link": ["https://github.com/Kaylinhh/ghost-tamagotchi", "https://play.unity.com/en/games/2695cfae-82b1-47a6-8c14-1513ebf141ba/ghost-tamagotchi-prototype"]
-        }
+        },
+        {
+        "id": 9,
+        "type": "game",
+        "path": "/project/9",
+        "name": "Unity - Deckbuilder Prototype",
+        "image": "assets/images/screen09.png",
+        "video": "assets/videos/deckbuilder.mp4",
+        "description": "Deckbuilder Prototype est un deckbuilder roguelite sur le thème du tarot développé sous Unity, inspiré de Slay the Spire. Le joueur incarne La Force, l'un des arcanes majeurs, et combat une série d'ennemis tirés du tarot, arcanes mineurs comme ennemis communs, figures de cour comme élites, et arcanes majeurs comme boss. Cartes, ennemis, effets de statut et événements sont tous ancrés dans la symbolique du tarot.",
+        "skill": [
+            {
+                "skill": "Architecture des effets de carte extensible",
+                "example": "J'ai conçu un système basé sur des ScriptableObjects où chaque effet de carte hérite d'une classe abstraite CardEffect et implémente une méthode Execute(CombatContext). De nouveaux effets peuvent être ajoutés sans toucher au code existant, et une carte peut combiner librement plusieurs effets. L'architecture anticipe déjà les mécaniques futures - le système upright/reversed est prévu dans le modèle de données."
+            },
+            {
+                "skill": "Pattern Observer pour le découplage de l'UI",
+                "example": "Le CombatManager expose des events C# statiques (OnStateChanged, OnCombatEnded, OnNotEnoughAP) auxquels l'UI s'abonne via OnEnable/OnDisable. Le manager ne référence jamais l'UI directement, rendant les deux systèmes indépendants et extensibles."
+            },
+            {
+                "skill": "Système d'effets de statut",
+                "example": "J'ai implémenté un système d'effets de statut modulaire où chaque effet (Faiblesse, Force) hérite d'un ScriptableObject abstrait StatusEffect et peut surcharger ModifyOutgoingDamage et OnTurnEnd. Les effets sont instanciés à l'exécution pour éviter de modifier les assets partagés, et l'accumulation est gérée en augmentant la durée plutôt qu'en ajoutant des instances dupliquées."
+            },
+            {
+                "skill": "Système d'intentions et de phases ennemies",
+                "example": "Les ennemis suivent des séquences d'intentions basées sur des patterns via un système IntentSlot supportant plusieurs intentions par tour. Le boss dispose d'un système à deux phases qui réinitialise automatiquement l'index des intentions lors de la transition, déclenchée quand les HP passent sous 50%."
+            },
+            {
+                "skill": "Gestion de l'état de la run",
+                "example": "Un singleton GameManager persiste les HP, le deck et la progression entre les combats. Le deck est copié au début de la run pour éviter de muter l'asset de référence, et les cartes acquises via le draft sont ajoutées dynamiquement. Un enum NodeType distingue les noeuds de combat, de feu de camp et de boss, pilotant des flux de jeu différents depuis le même gestionnaire de clics sur la map."
+            },
+            {
+                "skill": "Descriptions de cartes dynamiques",
+                "example": "Chaque CardEffect implémente une méthode GetDescription(CombatContext) qui retourne une description en temps réel reflétant les modificateurs actifs. Les cartes boostées par Force affichent leur valeur de dégâts modifiée en vert via le rich text de TextMeshPro, mise à jour à chaque rafraîchissement de la main."
+            }
+        ],
+        "stack": ["C#", "Unity", "Git/Github", "Claude Code"],
+        "link": ["https://play.unity.com/en/games/eda35df4-2bf1-425e-b830-bc950b41f8ff/deckbuilder-prototype"]
+    }
 
-    ] 
+] 
