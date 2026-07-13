@@ -6,7 +6,7 @@ import { LanguageService } from '../shared/language.service';
 import { CommonModule } from '@angular/common';
 import { HighlightPipe } from '../highlight.pipe';
 import { Skill } from '../shared/skill.model';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-project-detail',
@@ -21,12 +21,15 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
   isVideoModalOpen = false;
   
   private langSubscription?: Subscription;
+  currentLang$!: Observable<String>;
 
   constructor(
     private route: ActivatedRoute, 
     private projectsService: ProjectsService,
     private languageService: LanguageService
-  ) {}
+  ) {
+        this.currentLang$ = this.languageService.currentLang$;
+  }
 
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));

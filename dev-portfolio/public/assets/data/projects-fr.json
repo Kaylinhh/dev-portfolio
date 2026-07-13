@@ -81,5 +81,80 @@
             "skill": [{"skill": "Architecture logicielle modulaire", "example": "J'ai structuré le projet avec des systèmes réutilisables et extensibles. Par exemple, le grimoire du jeu utilise un seul système générique capable d'afficher à la fois les fiches de personnages et les recettes de cocktails, facilitant l'ajout de nouveaux contenus sans réécrire de code."}, {"skill": "Intégration narrative Ink & Unity", "example": "J'ai utilisé et adapté un wrapper Ink existant pour gérer la narration du jeu. J'ai développé la logique du flow narratif, notamment le système de pause/reprise du dialogue lors des transitions vers le mini-jeu de mixologie et le retour à la scène principale, assurant une continuité narrative fluide entre les différentes phases de jeu."}, {"skill": "Système de progression et de découverte", "example": "J'ai créé un gestionnaire de données qui permet de sauvegarder la progression du joueur (personnages rencontrés, recettes découvertes) uniquement en mémoire, réinitialisant chaque session pour une expérience de prototype fluide. Le système notifie automatiquement l'interface lors de nouvelles découvertes."}, {"skill": "Mini-jeu de mixologie interactif", "example": "J'ai développé un système de drag & drop permettant de glisser des ingrédients dans un shaker. "}, {"skill": "Interfaces utilisateur complexes", "example": "J'ai conçu plusieurs écrans : un grimoire à double-page avec navigation, un historique de dialogue avec coloration par personnage, des tooltips suivant la souris, et un écran de fin de journée révélant progressivement les cartes des personnages rencontrés. J'ai ajouté des animations fluides (shake du verre, apparition avec effet rebond, transitions en fondu)."}, {"skill": "Gestion avancée de scènes", "example": "J'ai mis en place un système chargeant et déchargeant dynamiquement les scènes (bar, scène principale, écran de cartes) tout en maintenant l'état du jeu. Le système détecte automatiquement d'où vient le joueur pour reprendre le dialogue au bon endroit."}, {"skill": "Polish audiovisuel", "example": "J'ai intégré un gestionnaire audio avec playlist musicale (shuffle/loop), sons d'interface, et effets sonores synchronisés aux animations pour renforcer l'immersion."}, {"skill": "Refactoring et qualité de code", "example": "J'ai effectué un nettoyage approfondi de l'ensemble du projet (30+ scripts) : suppression des logs de debug, ajout de documentation, optimisation du code, et sécurisation contre les erreurs courantes. J'ai particulièrement travaillé sur la lisibilité et la maintenabilité pour faciliter les évolutions futures."}, {"skill": "Montée en compétences Unity", "example": "Ce projet m'a permis de maîtriser des aspects avancés d'Unity : systèmes d'événements pour découpler les composants, manipulation du Canvas et des RectTransforms pour l'UI, coroutines pour les animations, et cycle de vie des GameObjects."}, {"skill": "Création d'assets et écriture narrative", "example": "J'ai conçu l'ensemble des visuels du jeu : personnages, backgrounds, UI et éléments d'interface. J'ai écrit l'intégralité du scénario et des dialogues via le langage Ink, en créant trois personnages aux personnalités distinctes et en concevant un système de dialogue ramifiée."}],                        
             "stack": ["C#", "Unity", "Git/Github"],
             "link": ["https://play.unity.com/fr/games/70a1edc4-7bc9-49f0-a3d5-118592e5a4d0/nova-prototype"]
-        }
-    ] 
+        },
+        {
+            "id": 8,
+            "type": "game",
+            "path": "/project/9",
+            "name": "Unity - Ghost Tamagotchi",
+            "image": "assets/images/screen0.png",
+            "video": "assets/videos/ghosttamagotchi.mp4",
+            "description": "Ghost Tamagotchi est un jeu Unity 2D où le joueur s'occupe d'un petit fantôme avec des besoins à gérer et un système d'évolution narratif. Le jeu mêle gestion de stats en temps réel et choix d'évolution influençant l'apparence du fantôme à travers trois stades de vie : bébé, ado et adulte.",
+            "skill": [
+                {
+                "skill": "Architecture événementielle C#",
+                "example": "J'ai structuré le projet autour d'un système d'Actions C# pour découpler complètement les composants. GhostStats ne connaît pas l'UI, GhostUI ne connaît pas le SpriteManager - chaque système s'abonne aux événements dont il a besoin sans dépendances directes, éliminant les risques de memory leaks."
+                },
+                {
+                "skill": "Système d'évolution narratif",
+                "example": "J'ai conçu un système de progression en trois stades avec des pop-ups d'évolution proposant quatre choix au joueur, dont une option aléatoire. Chaque choix influence le sprite final du fantôme. Le système gère la pause des stats pendant les choix et s'arrête proprement une fois le stade adulte atteint."
+                },
+                {
+                "skill": "Gestion d'états et feedback visuel",
+                "example": "J'ai implémenté un système de couleurs dynamiques sur les barres de stats (vert / orange / rouge selon les seuils) et une fin de partie conditionnelle selon les deux issues possibles : game over si une stat tombe à zéro, ou fin heureuse si le fantôme atteint l'âge adulte."
+                },
+                {
+                "skill": "AudioManager et intégration sonore",
+                "example": "J'ai intégré un gestionnaire audio centralisé gérant la musique de fond en boucle et les effets sonores."
+                },
+                {
+                "skill": "Animation et polish",
+                "example": "J'ai ajouté une animation de va-et-vient au fantôme avec flip horizontal automatique et pauses aléatoires pour donner de la vie au personnage, ainsi qu'un countdown visible avant chaque évolution pour maintenir l'engagement du joueur."
+                },
+                {
+                "skill": "Build WebGL et déploiement",
+                "example": "J'ai configuré le Canvas Scaler pour adapter l'UI à différentes résolutions et déployé le jeu en WebGL sur Unity Play."
+                }
+            ],
+            "stack": ["Unity", "C#", "Git/GitHub", "Claude Code"],
+            "link": ["https://github.com/Kaylinhh/ghost-tamagotchi", "https://play.unity.com/en/games/2695cfae-82b1-47a6-8c14-1513ebf141ba/ghost-tamagotchi-prototype"]
+        },
+        {
+        "id": 9,
+        "type": "game",
+        "path": "/project/9",
+        "name": "Unity - Deckbuilder Prototype",
+        "image": "assets/images/screen09.png",
+        "video": "assets/videos/deckbuilder.mp4",
+        "description": "Deckbuilder Prototype est un deckbuilder roguelite sur le thème du tarot développé sous Unity, inspiré de Slay the Spire. Le joueur incarne La Force, l'un des arcanes majeurs, et combat une série d'ennemis tirés du tarot, arcanes mineurs comme ennemis communs, figures de cour comme élites, et arcanes majeurs comme boss. Cartes, ennemis, effets de statut et événements sont tous ancrés dans la symbolique du tarot.",
+        "skill": [
+            {
+                "skill": "Architecture des effets de carte extensible",
+                "example": "J'ai conçu un système basé sur des ScriptableObjects où chaque effet de carte hérite d'une classe abstraite CardEffect et implémente une méthode Execute(CombatContext). De nouveaux effets peuvent être ajoutés sans toucher au code existant, et une carte peut combiner librement plusieurs effets. L'architecture anticipe déjà les mécaniques futures - le système upright/reversed est prévu dans le modèle de données."
+            },
+            {
+                "skill": "Pattern Observer pour le découplage de l'UI",
+                "example": "Le CombatManager expose des events C# statiques (OnStateChanged, OnCombatEnded, OnNotEnoughAP) auxquels l'UI s'abonne via OnEnable/OnDisable. Le manager ne référence jamais l'UI directement, rendant les deux systèmes indépendants et extensibles."
+            },
+            {
+                "skill": "Système d'effets de statut",
+                "example": "J'ai implémenté un système d'effets de statut modulaire où chaque effet (Faiblesse, Force) hérite d'un ScriptableObject abstrait StatusEffect et peut surcharger ModifyOutgoingDamage et OnTurnEnd. Les effets sont instanciés à l'exécution pour éviter de modifier les assets partagés, et l'accumulation est gérée en augmentant la durée plutôt qu'en ajoutant des instances dupliquées."
+            },
+            {
+                "skill": "Système d'intentions et de phases ennemies",
+                "example": "Les ennemis suivent des séquences d'intentions basées sur des patterns via un système IntentSlot supportant plusieurs intentions par tour. Le boss dispose d'un système à deux phases qui réinitialise automatiquement l'index des intentions lors de la transition, déclenchée quand les HP passent sous 50%."
+            },
+            {
+                "skill": "Gestion de l'état de la run",
+                "example": "Un singleton GameManager persiste les HP, le deck et la progression entre les combats. Le deck est copié au début de la run pour éviter de muter l'asset de référence, et les cartes acquises via le draft sont ajoutées dynamiquement. Un enum NodeType distingue les noeuds de combat, de feu de camp et de boss, pilotant des flux de jeu différents depuis le même gestionnaire de clics sur la map."
+            },
+            {
+                "skill": "Descriptions de cartes dynamiques",
+                "example": "Chaque CardEffect implémente une méthode GetDescription(CombatContext) qui retourne une description en temps réel reflétant les modificateurs actifs. Les cartes boostées par Force affichent leur valeur de dégâts modifiée en vert via le rich text de TextMeshPro, mise à jour à chaque rafraîchissement de la main."
+            }
+        ],
+        "stack": ["C#", "Unity", "Git/Github", "Claude Code"],
+        "link": ["https://play.unity.com/en/games/eda35df4-2bf1-425e-b830-bc950b41f8ff/deckbuilder-prototype"]
+    }
+
+] 

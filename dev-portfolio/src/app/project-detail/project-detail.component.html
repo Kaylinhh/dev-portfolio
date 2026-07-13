@@ -53,7 +53,8 @@
 
         <li class="list-none pb-2">
 
-            <span class="font-semibold">Technologies utilisées:</span>
+            <span *ngIf="(currentLang$ | async) === 'fr'" class="font-semibold">Technologies utilisées:</span>
+            <span *ngIf="(currentLang$ | async) === 'en'" class="font-semibold">Technologies used:</span>
 
             <ul *ngFor="let stack of project.stack">
                 {{stack}}
@@ -82,10 +83,11 @@
 
             <li class="list-none">
 
-                <span class="font-semibold">Unity Play:</span>
+                <span *ngIf="(currentLang$ | async) === 'fr'"  class="font-semibold">Jouable sur :</span>
+                <span *ngIf="(currentLang$ | async) === 'en'"  class="font-semibold">Playable on:</span>
 
                 <ul>
-                    <a [href]=[project.link[0]] class="underline text-teal-700">Jeu</a>
+                    <a [href]=[project.link[0]] class="underline text-teal-700">Unity Play</a>
                 </ul>
 
             </li>
@@ -96,7 +98,8 @@
 
             <li class="list-none">
 
-                <span class="font-semibold">Réseaux:</span>
+                <span *ngIf="(currentLang$ | async) === 'fr'" class="font-semibold">Réseaux :</span>
+                <span *ngIf="(currentLang$ | async) === 'en'" class="font-semibold">Socials:</span>
 
                 <ul>
                     <a [href]=[project.link[0]] class="underline text-teal-700">Discord</a>
@@ -114,6 +117,6 @@
             </li>
 
         </div>
-        
+         
     </div>
 </div>

@@ -133,5 +133,79 @@
         ],                        
         "stack": ["C#", "Unity", "Ink", "Git/Github"],
         "link": ["https://play.unity.com/en/games/70a1edc4-7bc9-49f0-a3d5-118592e5a4d0/nova-prototype"]
+    },
+    {
+        "id": 8,
+        "type": "game",
+        "path": "/project/8",
+        "name": "Unity - Ghost Tamagotchi",
+        "image": "assets/images/screen08.png",
+        "video": "assets/videos/ghosttamagotchi.mp4",
+        "description": "Ghost Tamagotchi is a Unity 2D game where the player takes care of a little ghost with needs to manage and a narrative evolution system. The game combines real-time stat management with evolution choices that influence the ghost's appearance across three life stages: baby, teen, and adult.",
+        "skill": [
+            {
+            "skill": "Event-driven C# architecture",
+            "example": "I structured the project around a C# Actions system to fully decouple components. GhostStats doesn't know about the UI, GhostUI doesn't know about the SpriteManager - each system subscribes to the events it needs with no direct dependencies, eliminating memory leak risks."
+            },
+            {
+            "skill": "Narrative evolution system",
+            "example": "I designed a three-stage progression system with evolution pop-ups offering four player choices, including a random option. Each choice influences the ghost's final sprite. The system pauses stat decay during choices and stops cleanly once the adult stage is reached."
+            },
+            {
+            "skill": "State management and visual feedback",
+            "example": "I implemented a dynamic color system on the stat bars (green / orange / red based on thresholds) and conditional end states: game over if a stat reaches zero, or a happy ending if the ghost reaches adulthood."
+            },
+            {
+            "skill": "AudioManager and sound integration",
+            "example": "I built a centralized audio manager handling looping background music and sound effects."
+            },
+            {
+            "skill": "Animation and polish",
+            "example": "I added a back-and-forth animation to the ghost with automatic horizontal flip and random pauses to bring the character to life, along with a visible countdown before each evolution to keep the player engaged."
+            },
+            {
+            "skill": "WebGL build and deployment",
+            "example": "I configured the Canvas Scaler to adapt the UI to different resolutions and deployed the game as a WebGL build on Unity Play."
+            }
+        ],
+        "stack": ["Unity", "C#", "Git/GitHub", "Claude Code"],
+        "link": ["https://github.com/Kaylinhh/ghost-tamagotchi", "https://play.unity.com/en/games/2695cfae-82b1-47a6-8c14-1513ebf141ba/ghost-tamagotchi-prototype"]
+    },
+    {
+    "id": 9,
+    "type": "game",
+    "path": "/project/9",
+    "name": "Unity - Deckbuilder Prototype",
+    "image": "assets/images/screen09.png",
+    "video": "assets/videos/deckbuilder.mp4",
+    "description": "Deckbuilder Prototype is a tarot-themed roguelite deckbuilder developed in Unity, inspired by Slay the Spire. The player embodies Strength, one of the Major Arcana, and battles through a series of encounters drawn from the tarot, Minor Arcana as common enemies, Court Cards as elites, and Major Arcana as bosses. Cards, enemies, status effects and events are all rooted in tarot symbolism.",
+    "skill": [
+        {
+            "skill": "Extensible card effect architecture",
+            "example": "I designed a ScriptableObject-based system where each card effect inherits from an abstract CardEffect class and implements a single Execute(CombatContext) method. New effects can be added without touching existing code, and a card can combine multiple effects freely. This architecture was built with future mechanics in mind - the upright/reversed system is already accounted for in the data model."
+        },
+        {
+            "skill": "Observer pattern for UI decoupling",
+            "example": "The CombatManager exposes static C# events (OnStateChanged, OnCombatEnded, OnNotEnoughAP) that the UI subscribes to via OnEnable/OnDisable. The manager never references the UI directly, making both systems independently testable and extensible."
+        },
+        {
+            "skill": "Status effect system",
+            "example": "I implemented a modular status effect system where each effect (Weak, Strength) inherits from an abstract StatusEffect ScriptableObject and can override ModifyOutgoingDamage and OnTurnEnd. Effects are instantiated at runtime to avoid modifying shared assets, and stacking is handled by increasing duration rather than adding duplicate instances."
+        },
+        {
+            "skill": "Enemy intent and phase system",
+            "example": "Enemies follow pattern-based intent sequences using an IntentSlot system that supports multiple intents per turn. The boss features a two-phase system that automatically resets the intent index on phase transition, triggered when HP drops below 50%."
+        },
+        {
+            "skill": "Run state management",
+            "example": "A GameManager singleton persists HP, deck, and progression across combats. The deck is copied at run start to avoid mutating the reference asset, and cards acquired through the draft system are added dynamically. A NodeType enum distinguishes combat nodes, campfire nodes, and boss nodes, driving different game flows from the same map click handler."
+        },
+        {
+            "skill": "Dynamic card descriptions",
+            "example": "Each CardEffect implements a GetDescription(CombatContext) method that returns a live description reflecting current modifiers. Cards boosted by Strength display their modified damage value in green using TextMeshPro rich text, updated every time the hand is refreshed."
+        }
+    ],
+    "stack": ["C#", "Unity", "Git/Github", "Claude Code"],
+    "link": ["https://play.unity.com/en/games/eda35df4-2bf1-425e-b830-bc950b41f8ff/deckbuilder-prototype"]
     }
 ]
